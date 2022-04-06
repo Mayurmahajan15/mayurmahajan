@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <title>filterjq table</title>
+</head>
+
+<body>
+<input id="live" type="text" placeholder="search here">
+<table>
+    <thead>
+        <tr>
+            <th>s no.</th>
+            <th>name</th>
+            <th>adress</th>
+            <th>moblie no.</th>
+        </tr>
+    </thead>
+    <tbody id="mytable">
+        <tr>
+            <td>1</td>
+            <td>rupesh</td>
+            <td>indore</td>
+            <td>6457646634</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>pradeep</td>
+            <td>shahpur</td>
+            <td>1234645692</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function(){
+        $("#live").on("keyup",function(){
+            var data=$(this).val().toLowerCase();
+            $("#mytable tr").filter(function(){
+                $(this).toggle($(this).text().toLocaleLower().indexOf(data)>-1)
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

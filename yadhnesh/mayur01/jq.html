@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+    <title>jquery</title>
+</head>
+<body>
+    <h1>web development</h1>
+    <button id="demo">hide th contain</button>
+    <button id="demo1">show the contain</button>
+    <script>
+        $(document).ready(function(){
+            $("#demo").click(function(){
+                $("h1").hide();
+            });
+            $("#demo1").click(function(){
+                $("h1").show();
+            })
+        })
+    </script>
+    
+</body>
+</html>
